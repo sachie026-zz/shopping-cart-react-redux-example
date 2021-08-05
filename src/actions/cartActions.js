@@ -12,9 +12,12 @@ export const cartDaleteAction = () => (dispatch) => {
   });
 };
 
-export const cartUpdateAction = () => (dispatch) => {
+export const cartUpdateAction = (id, value) => (dispatch) => {
   dispatch({
     type: "UPDATE_ITEM",
-    payload: "result_of_simple_action",
+    payload: {
+      id: id,
+      quantity: value,
+    },
   });
 };

@@ -1,4 +1,6 @@
-const cardReducer = (state = {}, action) => {
+const initialState = {};
+
+const cardReducer = (state = initialState, action) => {
   switch (action.type) {
     case "UPDATE_CARD_NAME":
       return {
