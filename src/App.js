@@ -1,10 +1,10 @@
-import ShoppingCart from "./pages/shoppingCart";
+import ShoppingCartContainer from "./pages/shoppingCartContainer";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <ShoppingCart />
+      <ShoppingCartContainer />
     </div>
   );
 }

@@ -5,10 +5,13 @@ export const cartAddAction = () => (dispatch) => {
   });
 };
 
-export const cartDaleteAction = () => (dispatch) => {
+export const cartDeleteAction = (id) => (dispatch) => {
+  console.log("id delete", id);
   dispatch({
     type: "DELETE_ITEM",
-    payload: "result_of_simple_action",
+    payload: {
+      id: id,
+    },
   });
 };
 
