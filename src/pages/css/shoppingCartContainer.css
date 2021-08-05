@@ -1,0 +1,8 @@
+.cart-container {
+  display: flex;
+  width: 1000px;
+  background-color: #f1f3f3;
+  padding: 35px;
+  justify-content: center;
+  align-items: center;
+}

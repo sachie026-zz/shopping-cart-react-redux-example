@@ -4,6 +4,8 @@ import { cartUpdateAction } from "../actions/cartActions";
 import CartItems from "./cartItems";
 import CardDetails from "./cardDetails";
 
+import "./css/shoppingCartContainer.css";
+
 const mapStateToProps = (state) => ({
   ...state,
 });
@@ -14,12 +16,7 @@ const mapDispatchToProps = (dispatch) => ({
 
 const ShoppingCartContainer = (props) => {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "row",
-      }}
-    >
+    <div className="cart-container">
       <CartItems />
       <CardDetails />
     </div>
