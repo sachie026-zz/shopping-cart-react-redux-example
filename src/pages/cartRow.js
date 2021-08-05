@@ -9,10 +9,7 @@ const CartRow = (props) => {
   return (
     <div key={`item-${item.id}`} className="cart-row">
       <div className="item-image">
-        <img
-          src={item.src}
-          alt="item"
-        />
+        <img src={item.src} alt="item" />
       </div>
       <div className="item-name">
         <label className="item-name-label">{item.name}</label>
@@ -31,8 +28,10 @@ const CartRow = (props) => {
         </button>
       </div>
       <div className="item-total">
-        <sup>$</sup>
-        {item.total}
+        <var>
+          <sup>$</sup>
+          {item.total}
+        </var>
       </div>
 
       <div className="item-remove">
