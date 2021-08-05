@@ -1,28 +1,31 @@
 const initialStoreState = {
   cartItems: [
     {
+      src: "http://www.theterracekitchen.in/wp-content/uploads/2019/07/048.-Chicken-Momos_545X545.png",
       id: "4231646",
       name: "Chicken Momo",
       quantity: 1,
-      price: 10.50,
-      total: 10.50,
+      price: 10.5,
+      total: 10.5,
     },
     {
+      src: "https://images.mummypages.ie/images/3422/171/8/7_12/Mexican+potatoes.jpg",
       id: "4231647",
       name: "Spicy Mexican potatoes",
       quantity: 1,
-      price: 8.50,
-      total: 8.50,
+      price: 8.5,
+      total: 8.5,
     },
     {
+      src: "https://thumbs.dreamstime.com/b/indian-bread-omelette-omlet-omlete-sandwich-served-tomato-ketchup-106486880.jpg",
       id: "4231648",
       name: "Breakfast",
       quantity: 1,
-      price: 5.90,
-      total: 5.90,
+      price: 5.9,
+      total: 5.9,
     },
   ],
-  subTotal: 24.90,
+  subTotal: 24.9,
 };
 
 const cartReducer = (state = initialStoreState, action) => {

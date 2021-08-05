@@ -8,7 +8,8 @@
 .item-name {
   display: flex;
   flex-direction: column;
-  flex: 2;
+  flex: 2.5;
+  justify-content: center;
 }
 
 .item-name-label {
@@ -59,4 +60,17 @@
 button {
   border-width: 0px;
   background: none;
+}
+
+.item-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+}
+
+img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
 }

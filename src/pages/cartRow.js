@@ -8,6 +8,12 @@ const CartRow = (props) => {
   const { item, incrementAction, decrementAction, deleteAction } = props;
   return (
     <div key={`item-${item.id}`} className="cart-row">
+      <div className="item-image">
+        <img
+          src={item.src}
+          alt="item"
+        />
+      </div>
       <div className="item-name">
         <label className="item-name-label">{item.name}</label>
         <label className="item-id-label">{item.id}</label>
