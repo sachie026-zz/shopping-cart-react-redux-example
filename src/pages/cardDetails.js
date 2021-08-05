@@ -11,7 +11,7 @@ const mapDispatchToProps = (dispatch) => ({
   cartDeleteAction: (id) => dispatch(cartDeleteAction(id)),
 });
 
-const CartItems = (props) => {
+const CardDetails = (props) => {
   const { cartReducer } = props;
   const cartItems = cartReducer.cartItems;
   const incrementAction = (id, quantity) => {
@@ -29,7 +29,7 @@ const CartItems = (props) => {
   return (
     <>
       <pre>{JSON.stringify(props)}</pre>
-      <div>Shopping Cart</div>
+      <div>Card Details</div>
       {cartItems.map((item, index) => (
         <div key={`item-${item.id}`}>
           <h1>{item.name}</h1> {item.quantity}
@@ -48,4 +48,4 @@ const CartItems = (props) => {
   );
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CartItems);
+export default connect(mapStateToProps, mapDispatchToProps)(CardDetails);
