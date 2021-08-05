@@ -4,25 +4,25 @@ const initialStoreState = {
       id: "4231646",
       name: "Chicken Momo",
       quantity: 1,
-      price: 10.5,
-      total: 10.5,
+      price: 10.50,
+      total: 10.50,
     },
     {
       id: "4231647",
       name: "Spicy Mexican potatoes",
       quantity: 1,
-      price: 8.5,
-      total: 8.5,
+      price: 8.50,
+      total: 8.50,
     },
     {
       id: "4231648",
       name: "Breakfast",
       quantity: 1,
-      price: 5.9,
-      total: 5.9,
+      price: 5.90,
+      total: 5.90,
     },
   ],
-  subTotal: 24.9,
+  subTotal: 24.90,
 };
 
 const cartReducer = (state = initialStoreState, action) => {
@@ -44,7 +44,6 @@ const cartReducer = (state = initialStoreState, action) => {
 
       const newSubTotal =
         state.subTotal - state.cartItems[deleteItemIndex].total;
-      console.log("deleteItemIndex newSubTotal", deleteItemIndex, newSubTotal);
       return {
         ...state,
         cartItems: afterDeleteItems,
@@ -53,7 +52,6 @@ const cartReducer = (state = initialStoreState, action) => {
 
     case "UPDATE_ITEM":
       const { id, quantity } = action.payload;
-      console.log("id, quantity ", id, quantity);
       let updatedSubTotal = 0;
       const updatedItems = state.cartItems.map((item) => {
         const temp = Object.assign({}, item);
