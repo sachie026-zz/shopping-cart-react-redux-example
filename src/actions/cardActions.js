@@ -1,27 +1,34 @@
-export const cardNameAction = () => (dispatch) => {
+export const cardNameAction = (value) => (dispatch) => {
   dispatch({
     type: "UPDATE_CARD_NAME",
-    payload: "result_of_simple_action",
+    payload: value,
   });
 };
 
-export const cardNumberAction = () => (dispatch) => {
+export const cardNumberAction = (value) => (dispatch) => {
   dispatch({
     type: "UPDATE_CARD_NUMBER",
-    payload: "result_of_simple_action",
+    payload: value,
   });
 };
 
-export const cardExpiryAction = () => (dispatch) => {
+export const cardExpiryMonthAction = (value) => (dispatch) => {
   dispatch({
-    type: "UPDATE_CARD_EXPIRY",
-    payload: "result_of_simple_action",
+    type: "UPDATE_CARD_EXPIRY_MONTH",
+    payload: value,
   });
 };
 
-export const cardCvvAction = () => (dispatch) => {
+export const cardExpiryYearAction = (value) => (dispatch) => {
+  dispatch({
+    type: "UPDATE_CARD_EXPIRY_YEAR",
+    payload: value,
+  });
+};
+
+export const cardCvvAction = (value) => (dispatch) => {
   dispatch({
     type: "UPDATE_CARD_CVV",
-    payload: "result_of_simple_action",
+    payload: value,
   });
 };

@@ -9,22 +9,19 @@ const initialState = {
 const cardReducer = (state = initialState, action) => {
   switch (action.type) {
     case "UPDATE_CARD_NAME":
-      const { name } = action.payload;
       return {
         ...state,
-        name: name,
+        name: action.payload,
       };
     case "UPDATE_CARD_NUMBER":
-      const { number } = action.payload;
       return {
         ...state,
-        number: number,
+        number: action.payload,
       };
     case "UPDATE_CARD_EXPIRY_MONTH":
-      const { month } = action.payload;
       return {
         ...state,
-        expiryMonth: month,
+        expiryMonth: action.payload,
       };
     case "UPDATE_CARD_EXPIRY_YEAR":
       const { year } = action.payload;

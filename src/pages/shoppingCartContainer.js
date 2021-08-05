@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { cartUpdateAction } from "../actions/cartActions";
 import CartItems from "./cartItems";
+import CardDetails from "./cardDetails";
 
 const mapStateToProps = (state) => ({
   ...state,
@@ -23,24 +24,15 @@ const ShoppingCartContainer = (props) => {
   // };
 
   return (
-    <>
-      {/* <pre>{JSON.stringify(props)}</pre>
-      <div>Shopping Cart</div>
-      {cartItems.map((item, index) => (
-        <div key={`item-${item.id}`}>
-          <h1>{item.name}</h1> {item.quantity}
-          <br />
-          <button onClick={() => incrementAction(item.id, item.quantity)}>
-            Increment
-          </button>
-          <button onClick={() => decrementAction(item.id, item.quantity)}>
-            Decrement
-          </button>
-          <br />
-        </div>
-      ))} */}
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+      }}
+    >
       <CartItems />
-    </>
+      <CardDetails />
+    </div>
   );
 };
 

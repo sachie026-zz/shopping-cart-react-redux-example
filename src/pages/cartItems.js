@@ -28,7 +28,13 @@ const CartItems = (props) => {
   };
 
   return (
-    <>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        flex: 1
+      }}
+    >
       <div>Shopping Cart</div>
       {cartItems.map((item, index) => (
         <div key={`item-${item.id}`}>
@@ -50,7 +56,7 @@ const CartItems = (props) => {
         </div>
       ))}
       <CartItemFooter />
-    </>
+    </div>
   );
 };
 

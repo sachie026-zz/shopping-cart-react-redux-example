@@ -1,50 +1,72 @@
 import React from "react";
 import { connect } from "react-redux";
-import { cartUpdateAction, cartDeleteAction } from "../actions/cartActions";
+import {
+  cardNameAction,
+  cardNumberAction,
+  cardCvvAction,
+  cardExpiryMonthAction,
+  cardExpiryYearAction,
+} from "../actions/cardActions";
 
 const mapStateToProps = (state) => ({
   ...state,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  cartUpdateAction: (id, value) => dispatch(cartUpdateAction(id, value)),
-  cartDeleteAction: (id) => dispatch(cartDeleteAction(id)),
+  cardNameAction: (value) => dispatch(cardNameAction(value)),
+  cardNumberAction: (value) => dispatch(cardNumberAction(value)),
+  cardCvvAction: (value) => dispatch(cardCvvAction(value)),
+  cardUpdateExpiryMonthAction: (value) =>
+    dispatch(cardExpiryMonthAction(value)),
+  cardUpdateExpiryYearAction: (value) => dispatch(cardExpiryYearAction(value)),
 });
 
 const CardDetails = (props) => {
-  const { cartReducer } = props;
-  const cartItems = cartReducer.cartItems;
-  const incrementAction = (id, quantity) => {
-    props.cartUpdateAction(id, quantity + 1);
+  const { cardReducer } = props;
+  const { name, number, CVV, expiryMonth, expiryYear } = cardReducer;
+  const updateCardName = (event) => {
+    props.cardNameAction(event.target.value);
   };
 
-  const decrementAction = (id, quantity) => {
-    props.cartUpdateAction(id, quantity - 1);
+  const updateCardNumber = (event) => {
+    props.cardNumberAction(event.target.value);
   };
 
-  const deleteAction = (id, quantity) => {
-    props.cartDeleteAction(id, quantity - 1);
+  const updateCardCvv = (event) => {
+    props.cardCvvAction(event.target.value);
   };
 
+  const updateCardExpiryMonth = () => {};
+
+  const updateCardExpiryYear = () => {};
   return (
-    <>
-      <pre>{JSON.stringify(props)}</pre>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        flex: 1,
+      }}
+    >
       <div>Card Details</div>
-      {cartItems.map((item, index) => (
-        <div key={`item-${item.id}`}>
-          <h1>{item.name}</h1> {item.quantity}
-          <br />
-          <button onClick={() => incrementAction(item.id, item.quantity)}>
-            Increment
-          </button>
-          <button onClick={() => decrementAction(item.id, item.quantity)}>
-            Decrement
-          </button>
-          <button onClick={() => deleteAction(item.id)}>Delete</button>
-          <br />
-        </div>
-      ))}
-    </>
+      <div>
+        <label>Card Type</label>
+        <label>VISA Mastercard</label>
+        <br />
+        <label>Name on Card</label>
+        <input type="text" value={name} onChange={updateCardName} />
+        <br />
+        <label>Card Number</label>
+        <input type="number" value={number} onChange={updateCardNumber} />
+        <br />
+        <label>Expiration Date</label>
+        <input type="text" value={expiryMonth} />
+        <input type="text" value={expiryYear} />
+        <br />
+        <label>CVV</label>
+        <input type="number" value={CVV} onChange={updateCardCvv} />
+        <br />
+      </div>
+    </div>
   );
 };
 
