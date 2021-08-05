@@ -34,6 +34,8 @@ const CartItems = (props) => {
         <div key={`item-${item.id}`}>
           <h3>{item.name}</h3> {item.quantity}
           <br />
+          {item.total}
+          <br />
           <button onClick={() => incrementAction(item.id, item.quantity)}>
             Increment
           </button>

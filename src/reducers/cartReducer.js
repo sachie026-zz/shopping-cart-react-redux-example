@@ -5,18 +5,21 @@ const initialStoreState = {
       name: "Chicken Momo",
       quantity: 1,
       price: 10.5,
+      total: 10.5,
     },
     {
       id: "4231647",
       name: "Spicy Mexican potatoes",
       quantity: 1,
       price: 8.5,
+      total: 8.5,
     },
     {
       id: "4231648",
       name: "Breakfast",
       quantity: 1,
       price: 5.9,
+      total: 5.9,
     },
   ],
   subTotal: 24.9,
@@ -45,6 +48,7 @@ const cartReducer = (state = initialStoreState, action) => {
         const temp = Object.assign({}, item);
         if (item.id === id) {
           temp.quantity = quantity;
+          temp.total = quantity * temp.price;
         }
         return temp;
       });
