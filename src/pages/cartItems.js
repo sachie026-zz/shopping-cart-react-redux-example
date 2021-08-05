@@ -36,7 +36,7 @@ const CartItems = (props) => {
         flex: 1,
       }}
     >
-      <div>Shopping Cart</div>
+      <h2>Shopping Cart</h2>
       {cartItems.map((item, index) => (
         <CartRow
           item={item}

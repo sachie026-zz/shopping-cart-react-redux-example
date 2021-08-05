@@ -9,22 +9,25 @@ const CartRow = (props) => {
   return (
     <div key={`item-${item.id}`} className="cart-row">
       <div className="item-name">
-        <label>{item.name}</label>
-        <label>{item.id}</label>
+        <label className="item-name-label">{item.name}</label>
+        <label className="item-id-label">{item.id}</label>
       </div>
       <div className="item-quantity-container">
         <button
           disabled={item.quantity === 0}
           onClick={() => decrementAction(item.id, item.quantity)}
         >
-          <FontAwesomeIcon icon={faMinus} size="6px"/>
+          <FontAwesomeIcon icon={faMinus} size="6px" />
         </button>
         <div className="item-quantity">{item.quantity}</div>
         <button onClick={() => incrementAction(item.id, item.quantity)}>
           <FontAwesomeIcon icon={faPlus} />
         </button>
       </div>
-      <div className="item-total">{item.total}</div>
+      <div className="item-total">
+        <sup>$</sup>
+        {item.total}
+      </div>
 
       <div className="item-remove">
         <button onClick={() => deleteAction(item.id)}>

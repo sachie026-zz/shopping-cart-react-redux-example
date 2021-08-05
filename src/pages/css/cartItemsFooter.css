@@ -1,0 +1,30 @@
+.cart-items-footer-container {
+  display: flex;
+  flex: 1;
+  background-color: #f1f3f3;
+  padding: 35px 0;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.continue-shopping {
+  flex: 1;
+}
+
+.continue-shopping-label {
+  margin-left: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: dodgerblue;
+}
+
+.subtotal-label {
+  color: #aaa;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.subtotal-value {
+  font-weight: 700;
+  font-size: 16px;
+}

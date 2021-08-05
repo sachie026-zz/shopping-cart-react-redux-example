@@ -1,13 +1,29 @@
 .cart-row {
   display: flex;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 50px 0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-right: 50px;
 }
 
 .item-name {
   display: flex;
   flex-direction: column;
   flex: 2;
+}
+
+.item-name-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.item-id-label {
+  font-size: 10px;
+  color: #999;
+  margin-top: 5px;
+}
+
+.item-id-label::before {
+  content: "#";
 }
 
 .item-quantity-container {
@@ -36,7 +52,7 @@
 .item-remove {
   display: flex;
   flex: 1;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
