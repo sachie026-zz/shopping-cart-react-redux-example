@@ -13,16 +13,6 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const ShoppingCartContainer = (props) => {
-  // const { cartReducer } = props;
-  // const cartItems = cartReducer.cartItems;
-  // const incrementAction = (id, quantity) => {
-  //   props.cartUpdateAction(id, quantity + 1);
-  // };
-
-  // const decrementAction = (id, quantity) => {
-  //   props.cartUpdateAction(id, quantity - 1);
-  // };
-
   return (
     <div
       style={{

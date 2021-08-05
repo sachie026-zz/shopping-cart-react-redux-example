@@ -56,7 +56,7 @@ const CardDetails = (props) => {
         <input type="text" value={name} onChange={updateCardName} />
         <br />
         <label>Card Number</label>
-        <input type="number" value={number} onChange={updateCardNumber} />
+        <input type="password" value={number} onChange={updateCardNumber} />
         <br />
         <label>Expiration Date</label>
         <input type="text" value={expiryMonth} />
