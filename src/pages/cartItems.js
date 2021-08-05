@@ -39,7 +39,10 @@ const CartItems = (props) => {
           <button onClick={() => incrementAction(item.id, item.quantity)}>
             Increment
           </button>
-          <button onClick={() => decrementAction(item.id, item.quantity)}>
+          <button
+            disabled={item.quantity === 0}
+            onClick={() => decrementAction(item.id, item.quantity)}
+          >
             Decrement
           </button>
           <button onClick={() => deleteAction(item.id)}>Delete</button>

@@ -32,30 +32,43 @@ const cartReducer = (state = initialStoreState, action) => {
       return {
         ...state,
       };
-    case "DELETE_ITEM":
-      const afterDeleteItems = state.cartItems.filter(
-        (item) => item.id !== action.payload.id
-      );
 
+    case "DELETE_ITEM":
+      let deleteItemIndex;
+      const afterDeleteItems = state.cartItems.filter((item, index) => {
+        if (item.id === action.payload.id) {
+          deleteItemIndex = index;
+        }
+        return item.id !== action.payload.id;
+      });
+
+      const newSubTotal =
+        state.subTotal - state.cartItems[deleteItemIndex].total;
+      console.log("deleteItemIndex newSubTotal", deleteItemIndex, newSubTotal);
       return {
         ...state,
         cartItems: afterDeleteItems,
+        subTotal: newSubTotal,
       };
+
     case "UPDATE_ITEM":
       const { id, quantity } = action.payload;
       console.log("id, quantity ", id, quantity);
+      let updatedSubTotal = 0;
       const updatedItems = state.cartItems.map((item) => {
         const temp = Object.assign({}, item);
         if (item.id === id) {
           temp.quantity = quantity;
           temp.total = quantity * temp.price;
         }
+        updatedSubTotal += temp.total;
         return temp;
       });
 
       return {
         ...state,
         cartItems: updatedItems,
+        subTotal: updatedSubTotal,
       };
     default:
       return state;
