@@ -44,7 +44,7 @@ const CardDetails = (props) => {
       style={{
         display: "flex",
         flexDirection: "column",
-        flex: 1,
+        flex: 0.5,
       }}
     >
       <div>Card Details</div>
