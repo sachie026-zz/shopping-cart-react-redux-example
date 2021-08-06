@@ -37,6 +37,10 @@
   flex-direction: column;
 }
 
+.card-number input {
+  -webkit-text-security: disc;
+}
+
 .card-expiration-container {
   display: flex;
   flex-direction: row;
@@ -94,11 +98,25 @@ select {
   margin-top: 15px;
 }
 
+.mastercard-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 15px;
+}
+
 .mastercard-icon {
   width: 50px;
   height: 50px;
+}
+
+.mastercard-label {
+  font-size: 8px;
+  color: white;
   position: relative;
-  right: 15px;
+  top: -10px;
 }
 
 .card-icon-container {

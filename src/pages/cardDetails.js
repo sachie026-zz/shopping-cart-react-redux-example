@@ -69,11 +69,14 @@ const CardDetails = (props) => {
                 </label>
               </div>
             </div>
-            <img
-              src="https://cpng.pikpng.com/pngl/s/249-2498425_mastercard-2019-logo-mastercard-logo-clipart.png"
-              alt="mastercard"
-              className="mastercard-icon"
-            />
+            <div className="mastercard-container">
+              <img
+                src="https://img.icons8.com/color/96/000000/mastercard-logo.png"
+                alt="mastercard"
+                className="mastercard-icon"
+              />
+              <label className="mastercard-label">mastercard</label>
+            </div>
           </div>
         </div>
         <div className="card-name">
@@ -82,7 +85,7 @@ const CardDetails = (props) => {
         </div>
         <div className="card-number">
           <label className="card-details-label">Card Number</label>
-          <input type="password" value={number} onChange={updateCardNumber} />
+          <input type="number" value={number} onChange={updateCardNumber} />
         </div>
         <div className="card-expiration-container">
           <div className="card-expiration">
@@ -94,8 +97,8 @@ const CardDetails = (props) => {
                 className="card-expiry-input margin-right-15"
                 onChange={updateCardExpiryMonth}
               >
-                {months.map((month) => (
-                  <option value={month}>{month.toLocaleUpperCase()}</option>
+                {months.map((month, index) => (
+                  <option value={index + 1}>{month.toLocaleUpperCase()}</option>
                 ))}
               </select>
               <select

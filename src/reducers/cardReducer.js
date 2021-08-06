@@ -1,8 +1,8 @@
 const initialState = {
   name: "",
   number: "",
-  expiryMonth: "",
-  expiryYear: "",
+  expiryMonth: "1",
+  expiryYear: "2021",
   CVV: "",
 };
 
