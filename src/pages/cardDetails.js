@@ -52,9 +52,13 @@ const CardDetails = (props) => {
               <label className="card-view-number">**** **** **** ****</label>
               <div className="card-view-footer">
                 <label className="card-view-footer-name">
-                  Giga Tamarashvii
+                  {name || "---- ----"}
                 </label>
-                <label className="card-view-footer-expiry">12/18</label>
+                <label className="card-view-footer-expiry">
+                  {expiryMonth || expiryYear
+                    ? `${expiryMonth}/${expiryYear}`
+                    : "12/18"}
+                </label>
               </div>
             </div>
             <img
