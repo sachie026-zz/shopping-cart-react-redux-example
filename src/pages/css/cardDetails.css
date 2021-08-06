@@ -66,14 +66,15 @@
   flex-direction: column;
 }
 
-input {
+input,
+select {
   background: none;
   border: none;
   border-bottom: 0.5px solid #888;
   padding: 10px 0px;
   margin-bottom: 25px;
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
 }
 
@@ -133,7 +134,7 @@ input {
 }
 
 .card-view-footer {
-    display: flex;
+  display: flex;
 }
 
 .card-view-footer-name {

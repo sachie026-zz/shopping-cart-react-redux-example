@@ -8,6 +8,7 @@ import {
   cardExpiryYearAction,
 } from "../actions/cardActions";
 import "./css/cardDetails.css";
+import { months, years } from "../utils/utils";
 
 const mapStateToProps = (state) => ({
   ...state,
@@ -87,18 +88,26 @@ const CardDetails = (props) => {
           <div className="card-expiration">
             <label className="card-details-label">Expiration Date</label>
             <div className="card-expiration-inputs">
-              <input
-                type="text"
+              <select
+                name="months"
+                id="months"
                 className="card-expiry-input margin-right-15"
-                value={expiryMonth}
                 onChange={updateCardExpiryMonth}
-              />
-              <input
-                type="text"
+              >
+                {months.map((month) => (
+                  <option value={month}>{month.toLocaleUpperCase()}</option>
+                ))}
+              </select>
+              <select
+                name="years"
+                id="years"
                 className="card-expiry-input margin-right-15"
-                value={expiryYear}
                 onChange={updateCardExpiryYear}
-              />
+              >
+                {years.map((year) => (
+                  <option value={year}>{year}</option>
+                ))}
+              </select>
             </div>
           </div>
           <div className="card-cvv">
