@@ -30,7 +30,7 @@ const CartRow = (props) => {
       <div className="item-total">
         <var>
           <sup>$</sup>
-          {item.total}
+          {item.total.toFixed(2)}
         </var>
       </div>
 

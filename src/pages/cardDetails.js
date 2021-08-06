@@ -7,6 +7,7 @@ import {
   cardExpiryMonthAction,
   cardExpiryYearAction,
 } from "../actions/cardActions";
+import "./css/cardDetails.css";
 
 const mapStateToProps = (state) => ({
   ...state,
@@ -40,31 +41,50 @@ const CardDetails = (props) => {
 
   const updateCardExpiryYear = () => {};
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        flex: 0.5,
-      }}
-    >
-      <div>Card Details</div>
-      <div>
-        <label>Card Type</label>
-        <label>VISA Mastercard</label>
-        <br />
-        <label>Name on Card</label>
-        <input type="text" value={name} onChange={updateCardName} />
-        <br />
-        <label>Card Number</label>
-        <input type="password" value={number} onChange={updateCardNumber} />
-        <br />
-        <label>Expiration Date</label>
-        <input type="text" value={expiryMonth} />
-        <input type="text" value={expiryYear} />
-        <br />
-        <label>CVV</label>
-        <input type="number" value={CVV} onChange={updateCardCvv} />
-        <br />
+    <div className="card-details-container">
+      <h2 className="card-details-header">Card Details</h2>
+      <div className="card-details-content">
+        <div className="card-type-container">
+          <label className="card-details-label">Card Type</label>
+          <label>VISA Mastercard</label>
+        </div>
+        <div className="card-name">
+          <label className="card-details-label">Name on Card</label>
+          <input type="text" value={name} onChange={updateCardName} />
+        </div>
+        <div className="card-number">
+          <label className="card-details-label">Card Number</label>
+          <input type="password" value={number} onChange={updateCardNumber} />
+        </div>
+        <div className="card-expiration-container">
+          <div className="card-expiration">
+            <label className="card-details-label">Expiration Date</label>
+            <div className="card-expiration-inputs">
+              <input
+                type="text"
+                className="card-expiry-input margin-right-15"
+                value={expiryMonth}
+              />
+              <input
+                type="text"
+                className="card-expiry-input"
+                value={expiryYear}
+              />
+            </div>
+          </div>
+          <div className="card-cvv">
+            <label className="card-details-label">CVV</label>
+            <input
+              type="number"
+              className="card-expiry-input"
+              value={CVV}
+              onChange={updateCardCvv}
+            />
+          </div>
+        </div>
+        <div className="checkout-container">
+          <input type="submit" className="checkout-button" value="Check Out" />
+        </div>
       </div>
     </div>
   );

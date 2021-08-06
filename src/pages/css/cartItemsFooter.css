@@ -4,7 +4,7 @@
   background-color: #f1f3f3;
   padding: 35px 0;
   align-items: center;
-  margin-right: 50px;
+  margin-right: 75px;
 }
 
 .continue-shopping {
@@ -26,5 +26,5 @@
 
 .subtotal-value {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
 }

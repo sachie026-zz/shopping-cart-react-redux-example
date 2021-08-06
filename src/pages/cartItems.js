@@ -33,7 +33,7 @@ const CartItems = (props) => {
       style={{
         display: "flex",
         flexDirection: "column",
-        flex: 1,
+        flex: 2,
       }}
     >
       <h2>Shopping Cart</h2>

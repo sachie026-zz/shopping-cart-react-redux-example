@@ -20,7 +20,7 @@ const CartItemFooter = (props) => {
       </div>
       <div className="subtotal-section">
         <label className="subtotal-label">Subtotal:</label>
-        <label className="subtotal-value">${subTotal}</label>
+        <label className="subtotal-value"> ${subTotal.toFixed(2)}</label>
       </div>
     </div>
   );
