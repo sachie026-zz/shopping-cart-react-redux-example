@@ -47,7 +47,14 @@ const CardDetails = (props) => {
         <div className="card-type-container">
           <label className="card-details-label">Card Type</label>
           <div className="card-icon-container">
-            <div></div>
+            <div className="card-view">
+                <label>
+                  VISA
+                </label>
+                <label>
+                  Giga Tamarashvii
+                </label>
+            </div>
             <img
               src="https://cpng.pikpng.com/pngl/s/249-2498425_mastercard-2019-logo-mastercard-logo-clipart.png"
               alt="mastercard"

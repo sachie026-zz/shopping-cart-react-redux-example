@@ -95,4 +95,23 @@ input {
 .mastercard-icon {
   width: 50px;
   height: 50px;
+  position: relative;
+  right: 15px;
+}
+
+.card-icon-container {
+  display: flex;
+  flex-direction: revert;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.card-view {
+  position: relative;
+  background: darkgray;
+  left: -70px;
+  height: 100px;
+  width: calc(100%);
+  border-radius: 5px;
+  padding: 15px;
 }
