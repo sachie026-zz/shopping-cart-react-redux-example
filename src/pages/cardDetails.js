@@ -48,12 +48,14 @@ const CardDetails = (props) => {
           <label className="card-details-label">Card Type</label>
           <div className="card-icon-container">
             <div className="card-view">
-                <label>
-                  VISA
-                </label>
-                <label>
+              <label className="visa-label">VISA</label>
+              <label className="card-view-number">**** **** **** ****</label>
+              <div className="card-view-footer">
+                <label className="card-view-footer-name">
                   Giga Tamarashvii
                 </label>
+                <label className="card-view-footer-expiry">12/18</label>
+              </div>
             </div>
             <img
               src="https://cpng.pikpng.com/pngl/s/249-2498425_mastercard-2019-logo-mastercard-logo-clipart.png"
