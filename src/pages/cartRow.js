@@ -20,7 +20,7 @@ const CartRow = (props) => {
           disabled={item.quantity === 0}
           onClick={() => decrementAction(item.id, item.quantity)}
         >
-          <FontAwesomeIcon icon={faMinus} size="6px" />
+          <FontAwesomeIcon icon={faMinus} />
         </button>
         <div className="item-quantity">{item.quantity}</div>
         <button onClick={() => incrementAction(item.id, item.quantity)}>

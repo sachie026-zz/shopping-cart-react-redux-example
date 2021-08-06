@@ -15,7 +15,7 @@ const CartItemFooter = (props) => {
   return (
     <div className="cart-items-footer-container">
       <div className="continue-shopping">
-        <FontAwesomeIcon icon={faArrowLeft} size="6px" />
+        <FontAwesomeIcon icon={faArrowLeft} />
         <label className="continue-shopping-label">Continue Shopping</label>
       </div>
       <div className="subtotal-section">

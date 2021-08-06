@@ -34,7 +34,10 @@ const CardDetails = (props) => {
   };
 
   const updateCardCvv = (event) => {
-    props.cardCvvAction(event.target.value);
+    const val = event.target.value;
+    if (val.toString().length <= 3) {
+      props.cardCvvAction(val);
+    }
   };
 
   const updateCardExpiryMonth = () => {};

@@ -39,6 +39,7 @@ const CartItems = (props) => {
       <h2>Shopping Cart</h2>
       {cartItems.map((item, index) => (
         <CartRow
+          key={`itemkey${index}`}
           item={item}
           incrementAction={incrementAction}
           decrementAction={decrementAction}

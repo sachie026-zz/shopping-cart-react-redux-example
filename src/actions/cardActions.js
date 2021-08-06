@@ -27,6 +27,7 @@ export const cardExpiryYearAction = (value) => (dispatch) => {
 };
 
 export const cardCvvAction = (value) => (dispatch) => {
+  console.log("cardCvvAction value", value);
   dispatch({
     type: "UPDATE_CARD_CVV",
     payload: value,

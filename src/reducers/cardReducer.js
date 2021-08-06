@@ -24,16 +24,14 @@ const cardReducer = (state = initialState, action) => {
         expiryMonth: action.payload,
       };
     case "UPDATE_CARD_EXPIRY_YEAR":
-      const { year } = action.payload;
       return {
         ...state,
-        expiryYear: year,
+        expiryYear: action.payload,
       };
     case "UPDATE_CARD_CVV":
-      const { cvv } = action.payload;
       return {
         ...state,
-        CVV: cvv,
+        CVV: action.payload,
       };
     default:
       return state;
