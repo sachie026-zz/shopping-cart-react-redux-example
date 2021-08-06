@@ -1,9 +1,9 @@
 const initialState = {
   name: "",
   number: "",
-  expiryMonth: null,
-  expiryYear: null,
-  CVV: null,
+  expiryMonth: "",
+  expiryYear: "",
+  CVV: "",
 };
 
 const cardReducer = (state = initialState, action) => {

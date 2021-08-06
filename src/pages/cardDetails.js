@@ -40,9 +40,13 @@ const CardDetails = (props) => {
     }
   };
 
-  const updateCardExpiryMonth = () => {};
+  const updateCardExpiryMonth = (event) => {
+    props.cardUpdateExpiryMonthAction(event.target.value);
+  };
 
-  const updateCardExpiryYear = () => {};
+  const updateCardExpiryYear = (event) => {
+    props.cardUpdateExpiryYearAction(event.target.value);
+  };
   return (
     <div className="card-details-container">
       <h2 className="card-details-header">Card Details</h2>
@@ -59,7 +63,7 @@ const CardDetails = (props) => {
                 </label>
                 <label className="card-view-footer-expiry">
                   {expiryMonth || expiryYear
-                    ? `${expiryMonth}/${expiryYear}`
+                    ? `${expiryMonth}/${expiryYear.toString().substr(-2)}`
                     : "12/18"}
                 </label>
               </div>
@@ -87,11 +91,13 @@ const CardDetails = (props) => {
                 type="text"
                 className="card-expiry-input margin-right-15"
                 value={expiryMonth}
+                onChange={updateCardExpiryMonth}
               />
               <input
                 type="text"
                 className="card-expiry-input margin-right-15"
                 value={expiryYear}
+                onChange={updateCardExpiryYear}
               />
             </div>
           </div>
