@@ -1,0 +1,5 @@
+.cart-items-container {
+  display: "flex";
+  flex-direction: "column";
+  flex: 2;
+}

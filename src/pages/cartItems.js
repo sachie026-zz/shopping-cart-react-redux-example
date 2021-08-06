@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { cartUpdateAction, cartDeleteAction } from "../actions/cartActions";
 import CartItemFooter from "./cartItemsFooter";
 import CartRow from "./cartRow";
+import "./css/cartItems.css";
 
 const mapStateToProps = (state) => ({
   ...state,
@@ -29,13 +30,7 @@ const CartItems = (props) => {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        flex: 2,
-      }}
-    >
+    <div className="cart-items-container">
       <h2>Shopping Cart</h2>
       {cartItems.map((item, index) => (
         <CartRow

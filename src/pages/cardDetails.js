@@ -56,7 +56,10 @@ const CardDetails = (props) => {
           <label className="card-details-label">Card Type</label>
           <div className="card-icon-container">
             <div className="card-view">
-              <label className="visa-label">VISA</label>
+              <div>
+                <label className="visa-label">VISA</label>
+                <label className="visa-label-watermark">VISA</label>
+              </div>
               <label className="card-view-number">**** **** **** ****</label>
               <div className="card-view-footer">
                 <label className="card-view-footer-name">
