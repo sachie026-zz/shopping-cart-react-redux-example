@@ -2,7 +2,7 @@
   display: flex;
   padding: 25px 0;
   border-bottom: 1px solid #e0e0e0;
-  margin-right: 75px;
+  margin-right: 100px;
 }
 
 .item-name {
@@ -48,7 +48,7 @@
 .item-total {
   display: flex;
   flex: 1;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -81,4 +81,8 @@ var {
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
+}
+
+button {
+    cursor: pointer;
 }

@@ -3,7 +3,7 @@ const initialStoreState = {
     {
       src: "http://www.theterracekitchen.in/wp-content/uploads/2019/07/048.-Chicken-Momos_545X545.png",
       id: "4231646",
-      name: "Chicken Momo",
+      name: "Chicken momo",
       quantity: 1,
       price: 10.5,
       total: 10.5,

@@ -4,11 +4,15 @@
   background-color: #f1f3f3;
   padding: 35px 0;
   align-items: center;
-  margin-right: 75px;
+  margin-right: 100px;
 }
 
 .continue-shopping {
   flex: 1;
+}
+
+svg {
+  cursor: pointer;
 }
 
 .continue-shopping-label {
@@ -16,6 +20,7 @@
   font-size: 14px;
   font-weight: 500;
   color: dodgerblue;
+  cursor: pointer;
 }
 
 .subtotal-label {

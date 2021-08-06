@@ -46,7 +46,14 @@ const CardDetails = (props) => {
       <div className="card-details-content">
         <div className="card-type-container">
           <label className="card-details-label">Card Type</label>
-          <label>VISA Mastercard</label>
+          <div className="card-icon-container">
+            <div></div>
+            <img
+              src="https://cpng.pikpng.com/pngl/s/249-2498425_mastercard-2019-logo-mastercard-logo-clipart.png"
+              alt="mastercard"
+              className="mastercard-icon"
+            />
+          </div>
         </div>
         <div className="card-name">
           <label className="card-details-label">Name on Card</label>
@@ -67,7 +74,7 @@ const CardDetails = (props) => {
               />
               <input
                 type="text"
-                className="card-expiry-input"
+                className="card-expiry-input margin-right-15"
                 value={expiryYear}
               />
             </div>
